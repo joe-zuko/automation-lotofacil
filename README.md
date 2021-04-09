@@ -3,6 +3,9 @@
 Bem vindo ao projeto de automação web do site da Lotofacil.
 
 Ele foi todo criado utilizando Cucumber, Capybara,  Rspec, Ruby, SitePrism e Selenium WebDriver.
+
+Total de cenários: 5
+
 Entre algumas de suas funcionalidades, estão:
 - busca de jogo;
 - verificação de resultados;
