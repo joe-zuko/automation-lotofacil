@@ -34,6 +34,11 @@ Então("eu verifico o valor total arrecadado de cada premiação") do
   log(@lotofacil.onze_check)
 end
 
+Então("vejo se meu jogo {string} venceu algum premio") do |meu_jogo|
+  @conferindo_resultado = @lotofacil.verificador_premio & @lotofacil.meu_jogo(meu_jogo)
+  log("Você acertou #{@conferindo_resultado.length} pontos")
+end
+
 #jogo nao encontrado
 
 Quando("eu faço procuro pelo jogo {string}") do |jogo|

@@ -61,4 +61,12 @@ class LotoFacil < SitePrism::Page
     total = @onzeAcertos[0].gsub(/[.,]/, "." => "", "," => ".").to_f * @onzeAcertos[4].gsub(/[.,]/, "." => "", "," => ".").to_f
     resultado_formatado = "Onze acertos total------ R$: " + sprintf("%.2f", total).reverse.gsub(/(\d{3})(?=\d)/, "\\1,").reverse.gsub(/[.,]/, "." => ",", "," => ".")
   end
+
+  def verificador_premio
+    @premio = resultadoJogo.text.split
+  end
+
+  def meu_jogo(meu_jogo)
+    meu_jogo.split
+  end
 end

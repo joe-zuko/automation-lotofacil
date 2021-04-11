@@ -25,12 +25,12 @@ Funcionalidade: Conferir jogo da loteria
             | "1582"   | "01 02 05 07 08 10 11 14 16 17 18 19 23 24 25"   | "R$ 477.072,00"               |
 
 
-
-
+    
     @arrecadacao
     Esquema do Cenario: Conferindo o total arrecado nas premiações
         Quando eu busco o jogo "1102"
         Então eu verifico o valor total arrecadado de cada premiação
+        E vejo se meu jogo "03 04 05 06 07 08 10 11 12 14 15 16 22 24 25" venceu algum premio
        
 
     @jogo_não_encontrado
