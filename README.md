@@ -128,7 +128,7 @@ Feito isso, temos um clone do projeto para que possamos trabalhar e executar os 
 ## 1- Instalando as gemas:
 No terminal, dentro da pasta raiz do projeto, execute o comando abaixo
 ``` bash
-gem install bundler
+bundler install 
 ```
 
 ## Abaixo alguns comandos para rodar a automação:
