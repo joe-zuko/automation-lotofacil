@@ -33,32 +33,37 @@ class LotoFacil < SitePrism::Page
   end
 
   def quinze_check
-    @quinzeAcertos = quinzeAcertos.text.split
-    total = @quinzeAcertos[0].gsub(/[.,]/, "." => "", "," => ".").to_f * @quinzeAcertos[4].gsub(/[.,]/, "." => "", "," => ".").to_f
+    total_premiacao_frase = quinzeAcertos.text.split
+    numeros = total_premiacao_frase.select { |numeros| numeros.to_f >= 1 }
+    total = numeros[0].gsub(/[.,]/, "." => "", "," => ".").to_f * numeros[1].gsub(/[.,]/, "." => "", "," => ".").to_f
     resultado_formatado = "Quinze acertos total---- R$: " + sprintf("%.2f", total).reverse.gsub(/(\d{3})(?=\d)/, "\\1,").reverse.gsub(/[.,]/, "." => ",", "," => ".")
   end
 
   def quatorze_check
-    @quatorzeAcertos = quatorzeAcertos.text.split
-    total = @quatorzeAcertos[0].gsub(/[.,]/, "." => "", "," => ".").to_f * @quatorzeAcertos[4].gsub(/[.,]/, "." => "", "," => ".").to_f
+    total_premiacao_frase = quatorzeAcertos.text.split
+    numeros = total_premiacao_frase.select { |numeros| numeros.to_f >= 1 }
+    total = numeros[0].gsub(/[.,]/, "." => "", "," => ".").to_f * numeros[1].gsub(/[.,]/, "." => "", "," => ".").to_f
     resultado_formatado = "Quatorze acertos total-- R$: " + sprintf("%.2f", total).reverse.gsub(/(\d{3})(?=\d)/, "\\1,").reverse.gsub(/[.,]/, "." => ",", "," => ".")
   end
 
   def treze_check
-    @trezeAcertos = trezeAcertos.text.split
-    total = @trezeAcertos[0].gsub(/[.,]/, "." => "", "," => ".").to_f * @trezeAcertos[4].gsub(/[.,]/, "." => "", "," => ".").to_f
+    total_premiacao_frase = trezeAcertos.text.split
+    numeros = total_premiacao_frase.select { |numeros| numeros.to_f >= 1 }
+    total = numeros[0].gsub(/[.,]/, "." => "", "," => ".").to_f * numeros[1].gsub(/[.,]/, "." => "", "," => ".").to_f
     resultado_formatado = "Treze acertos total----- R$: " + sprintf("%.2f", total).reverse.gsub(/(\d{3})(?=\d)/, "\\1,").reverse.gsub(/[.,]/, "." => ",", "," => ".")
   end
 
   def doze_check
-    @dozeAcertos = dozeAcertos.text.split
-    total = @dozeAcertos[0].gsub(/[.,]/, "." => "", "," => ".").to_f * @dozeAcertos[4].gsub(/[.,]/, "." => "", "," => ".").to_f
+    total_premiacao_frase = dozeAcertos.text.split
+    numeros = total_premiacao_frase.select { |numeros| numeros.to_f >= 1 }
+    total = numeros[0].gsub(/[.,]/, "." => "", "," => ".").to_f * numeros[1].gsub(/[.,]/, "." => "", "," => ".").to_f
     resultado_formatado = "Doze acertos total------ R$: " + sprintf("%.2f", total).reverse.gsub(/(\d{3})(?=\d)/, "\\1,").reverse.gsub(/[.,]/, "." => ",", "," => ".")
   end
 
   def onze_check
-    @onzeAcertos = onzeAcertos.text.split
-    total = @onzeAcertos[0].gsub(/[.,]/, "." => "", "," => ".").to_f * @onzeAcertos[4].gsub(/[.,]/, "." => "", "," => ".").to_f
+    total_premiacao_frase = onzeAcertos.text.split
+    numeros = total_premiacao_frase.select { |numeros| numeros.to_f >= 1 }
+    total = numeros[0].gsub(/[.,]/, "." => "", "," => ".").to_f * numeros[1].gsub(/[.,]/, "." => "", "," => ".").to_f
     resultado_formatado = "Onze acertos total------ R$: " + sprintf("%.2f", total).reverse.gsub(/(\d{3})(?=\d)/, "\\1,").reverse.gsub(/[.,]/, "." => ",", "," => ".")
   end
 
